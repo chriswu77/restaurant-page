@@ -17,7 +17,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(45, 45, 45, 0.8);;
+    background-color: rgba(45, 45, 45, 0.8);
+    z-index: 1;
 }
 
 #logo {
@@ -46,6 +47,7 @@ svg {
     width: 33.33%;
     font-size: 25px;
     color: #FFFFFF;
+    font-weight: 300;
 }
 
 .tabs:hover {
@@ -54,6 +56,14 @@ svg {
     color: #FEE600;
     font-weight: 500;
     text-decoration: underline;
+}
+
+.tabs-active {
+    color: #FEE600;
+    font-weight: 500;
+    text-decoration: underline;
+    position: relative;
+    bottom: 5px;
 }
 
 .home-pg-style {
@@ -75,4 +85,66 @@ h1 {
 #description {
     font-size: 24px;
     padding-bottom: 30px;
+}
+
+#menu-container {
+    background-color: rgba(45, 45, 45, 0.6);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 70px;
+}
+
+#main-dish-container {
+    display: flex;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-category {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 15px 30px;
+}
+
+.dish-card {
+    display: flex;
+    max-width: 430px;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.dish-desc-card {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.dish-title {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.dish-description {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.size-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.size-style {
+    font-size: 20px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
 }
