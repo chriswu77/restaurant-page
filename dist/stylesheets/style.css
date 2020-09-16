@@ -1,14 +1,16 @@
 html, body {
-    height: 100%;
     font-family: 'Quicksand', sans-serif;
 }
 
 body {
     background: url(../images/tsujita-image.jpg) no-repeat center center fixed; 
     background-size: cover;
+}
+
+#content {
+    margin-top: 70px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 header {
@@ -50,31 +52,32 @@ svg {
     font-weight: 300;
 }
 
-.tabs:hover {
-    /* background-color: #FFFFFF; */
-    cursor: pointer;
+.tabs:hover, .tabs-active {
     color: #FEE600;
     font-weight: 500;
     text-decoration: underline;
 }
 
+.tabs:hover {
+    cursor: pointer;
+}
+
 .tabs-active {
-    color: #FEE600;
-    font-weight: 500;
-    text-decoration: underline;
     position: relative;
     bottom: 5px;
 }
 
 .home-pg-style {
-    /* width: 50%; */
     background-color: rgba(45, 45, 45, 0.6);
     color: #FFFFFF;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
     padding: 0 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -90,10 +93,10 @@ h1 {
 #menu-container {
     background-color: rgba(45, 45, 45, 0.6);
     color: #FFFFFF;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    padding: 30px;
-    margin-top: 70px;
+    padding: 10px;
+    margin: 7vh 0;
 }
 
 #main-dish-container {
@@ -110,6 +113,7 @@ h1 {
     font-size: 40px;
     font-weight: 500;
     padding: 15px 30px;
+    text-decoration: underline;
 }
 
 .dish-card {
@@ -147,4 +151,97 @@ h1 {
 img {
     height: 150px;
     width: 150px;
+}
+
+#bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+#toppings-container {
+    display: flex;
+}
+
+.toppings {
+    padding: 0 30px;
+    font-size: 20px;
+}
+
+#toppings-title {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    padding: 30px 0;
+}
+
+@media(max-width: 1148px) {
+    .menu-category {
+        font-size: 30px;
+    }
+
+    .dish-title {
+        font-size: 20px;
+    }
+
+    .dish-description, .size-style, .toppings {
+        font-size: 17px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #toppings-title {
+        font-size: 20px;
+        padding: 20px 0;
+    }
+
+    .toppings {
+        padding: 0 20px;
+    }
+}
+
+@media(max-width: 936px) {
+    #main-dish-container {
+        flex-direction: column;
+    }
+
+    #toppings-container {
+        flex-direction: column;
+    }
+
+    .toppings {
+        padding: 5px 0;
+    }
+
+    img {
+        height: 130px;
+        width: 130px;
+    }
+
+    .dish-desc-card {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 510px) {
+    .tabs {
+        font-size: 20px;
+    }
+
+    #logo {
+        height: 40px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 375px) {
+    .tabs {
+        font-size: 15px;
+    }
 }
