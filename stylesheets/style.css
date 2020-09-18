@@ -68,16 +68,7 @@ svg {
 }
 
 .home-pg-style {
-    background-color: rgba(45, 45, 45, 0.6);
-    color: #FFFFFF;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -85,16 +76,12 @@ h1 {
     padding: 30px 0;
 }
 
-#description {
+#description, #address {
     font-size: 24px;
     padding-bottom: 30px;
 }
 
 #menu-container {
-    background-color: rgba(45, 45, 45, 0.6);
-    color: #FFFFFF;
-    display: inline-flex;
-    flex-direction: column;
     padding: 10px;
     margin: 7vh 0;
 }
@@ -157,7 +144,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 15px;
+    padding: 0 30px 15px 30px;
 }
 
 #toppings-container {
@@ -169,11 +156,78 @@ img {
     font-size: 20px;
 }
 
+#left {
+    padding-left: 0;
+}
+
+#right {
+    padding-right: 0;
+}
+
 #toppings-title {
     text-align: center;
     text-decoration: underline;
     font-size: 30px;
     padding: 30px 0;
+    font-weight: 500;
+}
+
+#contact-container {
+    padding: 30px;
+}
+
+#contact-info, #hours-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#hours-container {
+    padding-top: 30px;
+}
+
+.contact-desc {
+    font-size: 30px;
+}
+
+#tel {
+    padding: 15px 0;
+}
+
+.contact-titles, #hours-title {
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 500;
+}
+
+.contact-titles {
+    font-size: 40px;
+    padding-bottom: 5px;
+}
+
+#hours-title {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.hours {
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.home-pg-style, #menu-container, #contact-container {
+    background-color: rgba(45, 45, 45, 0.6);
+    color: #FFFFFF;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.home-pg-style, #contact-container {
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media(max-width: 1148px) {
@@ -238,10 +292,72 @@ img {
         height: 40px;
         width: 150px;
     }
+
+    #content {
+        align-items: center;
+    }
+
+    .home-pg-style {
+        margin-top: 30vh;
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 0 10px;
+    }
+
+    #contact-container {
+        margin-top: 10vh;
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    #description {
+        font-size: 15px;
+    }
+
+    #address {
+        font-size: 18px;
+    }
+
+    .contact-desc {
+        font-size: 25px;
+    }
+    
+    .contact-titles {
+        font-size: 30px;
+    }
+    
+    #hours-title {
+        font-size: 25px;
+    }
+    
+    .hours {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 375px) {
     .tabs {
         font-size: 15px;
+    }
+}
+
+.fade-in {
+    animation: fadeIn ease 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
