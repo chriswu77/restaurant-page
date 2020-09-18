@@ -1,12 +1,11 @@
+import {contentDOM} from './base';
 export {renderMenuPage};
 
 const renderMenuPage = () => {
-    const contentDOM = document.querySelector('#content');
-
-    contentDOM.innerHTML = test;
+    contentDOM.innerHTML = markup;
 }
 
-const test = `
+const markup = `
 <div id="menu-container">
     <div id="main-dish-container">
 
@@ -79,7 +78,7 @@ const test = `
 
             <div class="dish-card">
                 <div class="dish-desc-card">
-                    <p class="dish-title">Ramen</p>
+                    <p class="dish-title">RAMEN</p>
                     <p class="dish-description">Pork broth with charsiu, kikurage, green onion & seaweed</p>
                     <div class="size-card">
                         <p class="size-style">Large: $13.95</p>
@@ -132,12 +131,12 @@ const test = `
     <div id="bottom-container">
         <p id="toppings-title">Toppings</p>
         <div id="toppings-container">
-            <p class="toppings">Egg/$1.50</p>
+            <p class="toppings" id="left">Egg/$1.50</p>
             <p class="toppings">Charsiu pork/$5.00</p>
             <p class="toppings">Negi/$2.00</p>
             <p class="toppings">Bamboo shoot/$2.00</p>
             <p class="toppings">Seaweed/$1.50</p>
-            <p class="toppings">Woodear mushroom/$1.50</p>
+            <p class="toppings" id="right">Woodear mushroom/$1.50</p>
         </div>
     </div>
 </div> 

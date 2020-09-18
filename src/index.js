@@ -1,6 +1,8 @@
-import {renderHomePage} from './home-tab';
 import {createHeader} from './header';
+import {renderHomePage} from './home-tab';
 import {renderMenuPage} from './menu-tab';
+import {renderContactPage} from './contact-tab';
+import {contentDOM} from './base';
 
 createHeader();
 let currentPage;
@@ -21,22 +23,27 @@ const setActiveTab = tab => {
     currentTab.classList.add('tabs-active');
 };
 
-const initialLoad = () => {
-    currentPage = 'home';
-    renderHomePage();
-    setActiveTab('home');
+const changeTab = tab => {
+    if (currentPage === tab) return;
+    currentPage = tab;
+    contentDOM.classList.add('fade-in');
+    currentPage === 'home' ? renderHomePage() : currentPage === 'menu' ? renderMenuPage() : renderContactPage();
+    setActiveTab(tab);
+    setTimeout(() => {
+        contentDOM.classList.remove('fade-in');
+    }, 500);
 };
 
-window.addEventListener('load', initialLoad);
+window.addEventListener('load', changeTab('home'));
 
 tabsDOM.home.addEventListener('click', () => {
-    if (currentPage === 'home') return
-    initialLoad();
+    changeTab('home');
 });
 
 tabsDOM.menu.addEventListener('click', () => {
-    if (currentPage === 'menu') return
-    currentPage = 'menu';
-    renderMenuPage();
-    setActiveTab('menu');
+    changeTab('menu');
+});
+
+tabsDOM.contact.addEventListener('click', () => {
+    changeTab('contact');
 });
