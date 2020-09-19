@@ -131,12 +131,12 @@ const markup = `
     <div id="bottom-container">
         <p id="toppings-title">Toppings</p>
         <div id="toppings-container">
-            <p class="toppings" id="left">Egg/$1.50</p>
+            <p class="toppings">Egg/$1.50</p>
             <p class="toppings">Charsiu pork/$5.00</p>
             <p class="toppings">Negi/$2.00</p>
             <p class="toppings">Bamboo shoot/$2.00</p>
             <p class="toppings">Seaweed/$1.50</p>
-            <p class="toppings" id="right">Woodear mushroom/$1.50</p>
+            <p class="toppings">Woodear mushroom/$1.50</p>
         </div>
     </div>
 </div> 
