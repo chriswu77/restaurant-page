@@ -4,4 +4,4 @@ Created a restaurant page for my favorite ramen shop in LA - Tsujita - as part o
 
 First project using npm, webpack and ES6 modules.
 
-Live link: https://huskyharris.github.io/restaurant-page/
+Live link: https://chriswu77.github.io/restaurant-page/
